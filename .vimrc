@@ -75,7 +75,8 @@ let current_background = &background
 " Extract the appropriate color for line numbers and cursor line number
 let linenr_color = ayu_palette.linenr[current_background]
 
-
+highlight Normal ctermbg=NONE guibg=NONE
+highlight NonText ctermbg=NONE guibg=NONE
 " Apply the highlight group for line numbers using the extracted color
 execute 'highlight LineNr guifg=' . linenr_color
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
