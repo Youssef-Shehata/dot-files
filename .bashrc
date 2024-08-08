@@ -140,11 +140,9 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 
 
 
-
 hgrep(){
 history | grep $1
 }
-
 #alias tmux="TERM=screen-256color-bce tmux"
 
 alias iv='vim $(fzf -m --preview="cat {}")'
