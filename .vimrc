@@ -1,26 +1,36 @@
+set cursorline
 set shiftwidth=4
+set tabstop =4
+set scrolloff=10
+set nowrap 
 set autoindent 
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-set cursorline
-set scrolloff=10
-set tabstop =4
 set expandtab
-
-set spell
-set spelllang=en_us
+set showcmd
+set showmode
+set history=1000
+set wildmenu
+set wildmode=list:longest
+set wildignore=*.docx,*.jpg,*.gif,*.pdf,*.exe,.*pyc,*.img,*.xlsx
 set cindent
 set smartindent
 set number
 set relativenumber
 "Initialize plugins
-set clipboard=unnamedplus
+set clipboard=unnamed
 set nobackup
 set nowritebackup
 set noswapfile
+set mouse=a
 
+set sm
+set title
+set guioptions-=r
+set guioptions-=l
+set guioptions-=b
 if &term =~ 'xterm\|screen'
   " Set block cursor in normal mode
   let &t_EI = "\<Esc>[1 q"
@@ -62,7 +72,6 @@ let ayu_palette.linenr = {'dark': "#d9d9d9", 'light': "#ABB0B6", 'mirage': "#5C6
 
 " Determine the current background setting
 let current_background = &background
-
 " Extract the appropriate color for line numbers and cursor line number
 let linenr_color = ayu_palette.linenr[current_background]
 
@@ -89,14 +98,22 @@ vnoremap K :m '<-2<CR>gv=gv
 inoremap <silent> <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 nnoremap <silent> <leader>h :nohlsearch<CR>
-nnoremap <leader>i :w<CR>
-
-
-
-
-
+nnoremap <silent><leader>i :w<CR>
 nmap ++ <plug>NERDCommenterToggle
 vmap ++ <plug>NERDCommenterToggle
+
+set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" always show signcolumns
+set signcolumn=yes
+
+
+
+
 " coc config
 let g:coc_global_extensions = [
   \ 'coc-snippets',
@@ -108,14 +125,6 @@ let g:coc_global_extensions = [
   \ ]
 " from readme
 " if hidden is not set, TextEdit might fail.
-set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup " Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" always show signcolumns
-set signcolumn=yes
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
@@ -184,7 +193,14 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+set statusline=
+set statusline+=\ %F\ %M\
+set statusline+=%=
+set statusline+=\ \ row:\ %l\ col:\ %c\ percent:\ %p%%
+
+set laststatus=2
+
 
 " Using CocList
 " Show all diagnostics
