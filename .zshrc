@@ -67,15 +67,14 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color=auto'
 alias vim='vim'
 alias c='clear'
-
+alias bat='batcat'
 # Correct the source line for fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias grep='grep --color=auto'
-#hgrep(){
-  #history | grep $1
-#}
 
+alias s='~/scripts/search.sh'
+alias hgrep='~/scripts/hgrip.sh'
 # Shell integrations
 
 #eval "$(zoxide init --cmd cd zsh)"

@@ -20,7 +20,7 @@ set smartindent
 set number
 set relativenumber
 "Initialize plugins
-set clipboard=unnamed
+
 set nobackup
 set nowritebackup
 set noswapfile
@@ -182,8 +182,8 @@ xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 " Use <C-d> for select selections ranges, needs server support, like: coc-tsserver, coc-python
-nmap <silent> <C-d> <Plug>(coc-range-select)
-xmap <silent> <C-d> <Plug>(coc-range-select)
+"nmap <silent> <C-d> <Plug>(coc-range-select)
+"xmap <silent> <C-d> <Plug>(coc-range-select)
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
 
