@@ -44,7 +44,7 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
 # History
-HISTSIZE=2000
+HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
@@ -65,13 +65,18 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='ls --color=auto'
-alias vim='vim'
 alias c='clear'
 alias bat='batcat'
+alias gst='git status'
+alias todo='nvim ~/Practice/Notes/TODO.txt'
+alias notes='nvim ~/Practice/Notes/notes.txt'
+alias cov='nvim ~/Practice/Notes/summAndLetter'
+alias upNotes='~/Practice/Notes/upNotes.sh'
 # Correct the source line for fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias grep='grep --color=auto'
+alias caps='xmodmap ~/.capstpesc'
 
 alias s='~/scripts/search.sh'
 alias hgrep='~/scripts/hgrip.sh'
@@ -79,3 +84,7 @@ alias hgrep='~/scripts/hgrip.sh'
 
 #eval "$(zoxide init --cmd cd zsh)"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+
+export PATH=$PATH:$(go env GOPATH)/bin 

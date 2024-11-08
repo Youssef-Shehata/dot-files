@@ -56,6 +56,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ayu-theme/ayu-vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'altercation/vim-colors-solarized'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 call plug#end()
 
@@ -64,7 +65,7 @@ let g:rustfmt_emit_files = 1
 let g:rustfmt_fail_silently = 0
 
 set            termguicolors
-let ayucolor="dark"   " for dark version of theme
+"let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
 let ayu_palette = {}
 let ayu_palette.linenr = {'dark': "#d9d9d9", 'light': "#ABB0B6", 'mirage': "#5C6773"}
@@ -80,6 +81,8 @@ highlight NonText ctermbg=NONE guibg=NONE
 " Apply the highlight group for line numbers using the extracted color
 execute 'highlight LineNr guifg=' . linenr_color
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+" cursorline colors 
+highlight CursorLine guibg=#010101
 
 
 
