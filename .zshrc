@@ -63,6 +63,10 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 #zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# Move by word
+bindkey '^[[1;5C' forward-word   # Ctrl + Right Arrow
+bindkey '^[[1;5D' backward-word  # Ctrl + Left Arrow
+
 # Aliases
 alias ls='ls --color=auto'
 alias c='clear'
