@@ -109,6 +109,12 @@ _G.packer_plugins = {
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/fidget.nvim",
     url = "https://github.com/j-hui/fidget.nvim"
   },
+  ["gitsigns.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
+    loaded = true,
+    path = "/home/joe/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -170,7 +176,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
-    config = { "\27LJ\2\n†\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\vstyles\1\0\2\rsidebars\16transparent\vfloats\16transparent\1\0\1\16transparent\2\nsetup\15tokyonight\frequire\0" },
+    config = { "\27LJ\2\n†\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\vstyles\1\0\2\vfloats\16transparent\rsidebars\16transparent\1\0\1\16transparent\2\nsetup\15tokyonight\frequire\0" },
     loaded = true,
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
@@ -188,9 +194,13 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 -- Config for: tokyonight.nvim
 time([[Config for tokyonight.nvim]], true)
-try_loadstring("\27LJ\2\n†\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\vstyles\1\0\2\rsidebars\16transparent\vfloats\16transparent\1\0\1\16transparent\2\nsetup\15tokyonight\frequire\0", "config", "tokyonight.nvim")
+try_loadstring("\27LJ\2\n†\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\vstyles\1\0\2\vfloats\16transparent\rsidebars\16transparent\1\0\1\16transparent\2\nsetup\15tokyonight\frequire\0", "config", "tokyonight.nvim")
 time([[Config for tokyonight.nvim]], false)
 
 _G._packer.inside_compile = false

@@ -51,6 +51,7 @@ HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
+setopt HIST_REDUCE_BLANKS
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
@@ -72,6 +73,7 @@ alias ls='ls --color=auto'
 alias c='clear'
 alias bat='batcat'
 alias gst='git status'
+alias vim='nvim'
 alias todo='nvim ~/Practice/Notes/TODO.txt'
 alias notes='nvim ~/Practice/Notes/notes.txt'
 alias cov='nvim ~/Practice/Notes/summAndLetter'
@@ -92,3 +94,13 @@ alias hgrep='~/scripts/hgrip.sh'
 
 
 export PATH=$PATH:$(go env GOPATH)/bin 
+
+# Tmux sessionizer 
+alias tmux-sessionizer='~/.local/scripts/tmux-sessionizer.sh'
+bindkey -s ^f " tmux-sessionizer\n"
+
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

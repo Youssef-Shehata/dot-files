@@ -113,3 +113,5 @@ vim.keymap.set("n", "<leader>sg", function()
     vim.cmd.wincmd("L")
     vim.fn.chansend(vim.bo.channel, { "git status\r\n" })
 end)
+
+
