@@ -36,7 +36,7 @@ local servers = {
   pyright = {
     python = {
       analysis = {
-        typeCheckingMode = "off",         -- or "basic", "strict"
+        typeCheckingMode = "off", -- or "basic", "strict"
         diagnosticMode = "openFilesOnly",
         autoSearchPaths = true,
         useLibraryCodeForTypes = true,
@@ -142,6 +142,13 @@ cmp.setup {
 }
 lsp_zero.on_attach(function(client, bufnr)
   local opts = { buffer = bufnr }
+  vim.diagnostic.config({
+    virtual_text = true, -- ← this re-enables inline errors
+    signs = true,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+  })
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
   vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
@@ -173,7 +180,7 @@ require('mason-lspconfig').setup({
 }
 )
 local opts = {
-  tools = {   -- rust-tools options
+  tools = { -- rust-tools options
 
     -- how to execute terminal commands
     -- options right now: termopen / quickfix / toggleterm / vimux
@@ -335,7 +342,7 @@ local opts = {
     -- standalone file support
     -- setting it to false may improve startup time
     standalone = true,
-  },   -- rust-analyzer options
+  }, -- rust-analyzer options
 
   -- debugging stuff
   dap = {

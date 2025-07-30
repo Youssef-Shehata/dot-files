@@ -75,7 +75,7 @@ alias bat='batcat'
 alias gst='git status'
 alias vim='nvim'
 alias todo='nvim ~/Practice/Notes/TODO.txt'
-alias notes='nvim ~/Practice/Notes/notes.txt'
+alias notes='cd ~/Practice/Notes/ && tmux new -s Notes'
 alias cov='nvim ~/Practice/Notes/summAndLetter'
 alias upNotes='~/Practice/Notes/upNotes.sh'
 # Correct the source line for fzf
@@ -98,9 +98,15 @@ export PATH=$PATH:$(go env GOPATH)/bin
 # Tmux sessionizer 
 alias tmux-sessionizer='~/.local/scripts/tmux-sessionizer.sh'
 bindkey -s ^f " tmux-sessionizer\n"
+bindkey -s ^v " nvim .\n"
 
 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# opencode
+export PATH=/home/joe/.opencode/bin:$PATH
+export EDITOR=nvim
+export VISUAL=nvim

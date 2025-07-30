@@ -53,4 +53,4 @@ vim.opt.splitbelow = true
 
 vim.opt.cursorline = false
 
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
