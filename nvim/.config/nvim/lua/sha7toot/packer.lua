@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
         cloak_character = "•",
         highlight_group = "Comment",
         patterns = {
-          { file_pattern = ".env*", cloak_pattern = "=.+" }, -- hide everything after =
+          { file_pattern = ".*%.env.*", cloak_pattern = "=.+" }, -- hide everything after =
         },
       })
     end

@@ -110,3 +110,12 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=/home/joe/.opencode/bin:$PATH
 export EDITOR=nvim
 export VISUAL=nvim
+
+# bun completions
+[ -s "/home/joe/.bun/_bun" ] && source "/home/joe/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+. "$HOME/.turso/env"
