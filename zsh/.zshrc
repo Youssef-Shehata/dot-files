@@ -78,6 +78,7 @@ alias todo='nvim ~/Practice/Notes/TODO.txt'
 alias notes='cd ~/Practice/Notes/ && tmux new -s Notes'
 alias cov='nvim ~/Practice/Notes/summAndLetter'
 alias upNotes='~/Practice/Notes/upNotes.sh'
+alias opc='opencode run --model google/gemini-2.0-flash '
 # Correct the source line for fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -117,5 +118,5 @@ export VISUAL=nvim
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
+export PATH="$HOME/.cargo/bin:$PATH"
 . "$HOME/.turso/env"
