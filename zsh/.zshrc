@@ -1,3 +1,5 @@
+#profiler
+#zmodload zsh/zprof
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -69,6 +71,7 @@ bindkey '^[[1;5C' forward-word   # Ctrl + Right Arrow
 bindkey '^[[1;5D' backward-word  # Ctrl + Left Arrow
 
 # Aliases
+alias tmuxp='tmux new-session -s "$(basename "$(dirname "$PWD")")/$(basename "$PWD")"'
 alias ls='ls --color=auto'
 alias c='clear'
 alias bat='batcat'

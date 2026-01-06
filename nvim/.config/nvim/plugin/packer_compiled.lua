@@ -80,7 +80,7 @@ _G.packer_plugins = {
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["cloak.nvim"] = {
-    config = { "\27LJ\2\n´\1\0\0\5\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\3\0005\4\4\0>\4\1\3=\3\5\2B\0\2\1K\0\1\0\rpatterns\1\0\2\17file_pattern\14.*%.env.*\18cloak_pattern\b=.+\1\0\3\fenabled\2\20highlight_group\fComment\20cloak_character\bâ€¢\nsetup\ncloak\frequire\0" },
+    config = { "\27LJ\2\n´\1\0\0\5\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\3\0005\4\4\0>\4\1\3=\3\5\2B\0\2\1K\0\1\0\rpatterns\1\0\2\18cloak_pattern\b=.+\17file_pattern\14.*%.env.*\1\0\3\20highlight_group\fComment\20cloak_character\bâ€¢\fenabled\2\nsetup\ncloak\frequire\0" },
     loaded = true,
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/cloak.nvim",
     url = "https://github.com/laytan/cloak.nvim"
@@ -179,19 +179,25 @@ _G.packer_plugins = {
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
   },
+  ["supermaven-nvim"] = {
+    config = { "\27LJ\2\n\15\0\0\1\0\0\0\2+\0\1\0L\0\2\0º\2\1\0\4\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0023\3\n\0=\3\v\2B\0\2\1K\0\1\0\14condition\0\ncolor\1\0\2\21suggestion_color\f#accccc\ncterm\3ô\1\21ignore_filetypes\1\0\1\bcpp\2\fkeymaps\1\0\3\20disable_keymaps\2\30disable_inline_completion\2\14log_level\tinfo\1\0\3\16accept_word\n<C-b>\22accept_suggestion\n<TAB>\21clear_suggestion\n<C-c>\nsetup\20supermaven-nvim\frequire\0" },
+    loaded = true,
+    path = "/home/joe/.local/share/nvim/site/pack/packer/start/supermaven-nvim",
+    url = "https://github.com/supermaven-inc/supermaven-nvim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope.nvim"] = {
-    config = { "\27LJ\2\nš\2\0\0\6\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\6\0005\4\4\0005\5\3\0=\5\5\4=\4\a\0035\4\t\0005\5\b\0=\5\n\4=\4\v\3B\1\2\0016\1\f\0009\3\r\0'\4\n\0B\1\3\1K\0\1\0\19load_extension\npcall\15extensions\bfzf\1\0\0\1\0\4\25override_file_sorter\2\28override_generic_sorter\2\nfuzzy\2\14case_mode\15smart_case\rdefaults\1\0\0\25file_ignore_patterns\1\0\0\1\3\0\0\17node_modules\t.git\nsetup\14telescope\frequire\0" },
+    config = { "\27LJ\2\n€\5\0\0\a\0\26\0\0316\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\18\0005\4\4\0005\5\3\0=\5\5\0045\5\a\0005\6\6\0=\6\b\0055\6\t\0=\6\n\0055\6\v\0=\6\f\5=\5\r\0045\5\15\0005\6\14\0=\6\16\5=\5\17\4=\4\19\0035\4\21\0005\5\20\0=\5\22\4=\4\23\3B\1\2\0016\1\24\0009\3\25\0'\4\22\0B\1\3\1K\0\1\0\19load_extension\npcall\15extensions\bfzf\1\0\0\1\0\4\14case_mode\15smart_case\25override_file_sorter\2\28override_generic_sorter\2\nfuzzy\2\rdefaults\1\0\0\18layout_config\15horizontal\1\0\3\vheight\3d\19preview_cutoff\3(\nwidth\3\3\1\0\1\18preview_width\4³æÌ™\3³æŒÿ\3\16borderchars\fpreview\1\t\0\0\bâ”€\bâ”‚\bâ”€\bâ”‚\bâ•­\bâ•®\bâ•¯\bâ•°\fresults\1\t\0\0\bâ”€\bâ”‚\bâ”€\bâ”‚\bâ”œ\bâ”¤\bâ•¯\bâ•°\vprompt\1\0\0\1\t\0\0\bâ”€\bâ”‚\6_\bâ”‚\bâ•­\bâ•®\bâ”‚\bâ”‚\25file_ignore_patterns\1\0\3\20layout_strategy\15horizontal\21sorting_strategy\15descending\18path_displays\nsmart\1\3\0\0\17node_modules\t.git\nsetup\14telescope\frequire\0" },
     loaded = true,
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
-    config = { "\27LJ\2\n†\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\vstyles\1\0\2\rsidebars\16transparent\vfloats\16transparent\1\0\1\16transparent\2\nsetup\15tokyonight\frequire\0" },
+    config = { "\27LJ\2\n†\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\vstyles\1\0\2\vfloats\16transparent\rsidebars\16transparent\1\0\1\16transparent\2\nsetup\15tokyonight\frequire\0" },
     loaded = true,
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
@@ -203,6 +209,7 @@ _G.packer_plugins = {
     url = "https://github.com/folke/ts-comments.nvim"
   },
   ["typescript-tools.nvim"] = {
+    config = { "\27LJ\2\nB\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\21typescript-tools\frequire\0" },
     loaded = true,
     path = "/home/joe/.local/share/nvim/site/pack/packer/start/typescript-tools.nvim",
     url = "https://github.com/pmizio/typescript-tools.nvim"
@@ -215,30 +222,38 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: ts-comments.nvim
-time([[Config for ts-comments.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16ts-comments\frequire\0", "config", "ts-comments.nvim")
-time([[Config for ts-comments.nvim]], false)
--- Config for: cloak.nvim
-time([[Config for cloak.nvim]], true)
-try_loadstring("\27LJ\2\n´\1\0\0\5\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\3\0005\4\4\0>\4\1\3=\3\5\2B\0\2\1K\0\1\0\rpatterns\1\0\2\17file_pattern\14.*%.env.*\18cloak_pattern\b=.+\1\0\3\fenabled\2\20highlight_group\fComment\20cloak_character\bâ€¢\nsetup\ncloak\frequire\0", "config", "cloak.nvim")
-time([[Config for cloak.nvim]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\2\nš\2\0\0\6\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\6\0005\4\4\0005\5\3\0=\5\5\4=\4\a\0035\4\t\0005\5\b\0=\5\n\4=\4\v\3B\1\2\0016\1\f\0009\3\r\0'\4\n\0B\1\3\1K\0\1\0\19load_extension\npcall\15extensions\bfzf\1\0\0\1\0\4\25override_file_sorter\2\28override_generic_sorter\2\nfuzzy\2\14case_mode\15smart_case\rdefaults\1\0\0\25file_ignore_patterns\1\0\0\1\3\0\0\17node_modules\t.git\nsetup\14telescope\frequire\0", "config", "telescope.nvim")
+try_loadstring("\27LJ\2\n€\5\0\0\a\0\26\0\0316\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\18\0005\4\4\0005\5\3\0=\5\5\0045\5\a\0005\6\6\0=\6\b\0055\6\t\0=\6\n\0055\6\v\0=\6\f\5=\5\r\0045\5\15\0005\6\14\0=\6\16\5=\5\17\4=\4\19\0035\4\21\0005\5\20\0=\5\22\4=\4\23\3B\1\2\0016\1\24\0009\3\25\0'\4\22\0B\1\3\1K\0\1\0\19load_extension\npcall\15extensions\bfzf\1\0\0\1\0\4\14case_mode\15smart_case\25override_file_sorter\2\28override_generic_sorter\2\nfuzzy\2\rdefaults\1\0\0\18layout_config\15horizontal\1\0\3\vheight\3d\19preview_cutoff\3(\nwidth\3\3\1\0\1\18preview_width\4³æÌ™\3³æŒÿ\3\16borderchars\fpreview\1\t\0\0\bâ”€\bâ”‚\bâ”€\bâ”‚\bâ•­\bâ•®\bâ•¯\bâ•°\fresults\1\t\0\0\bâ”€\bâ”‚\bâ”€\bâ”‚\bâ”œ\bâ”¤\bâ•¯\bâ•°\vprompt\1\0\0\1\t\0\0\bâ”€\bâ”‚\6_\bâ”‚\bâ•­\bâ•®\bâ”‚\bâ”‚\25file_ignore_patterns\1\0\3\20layout_strategy\15horizontal\21sorting_strategy\15descending\18path_displays\nsmart\1\3\0\0\17node_modules\t.git\nsetup\14telescope\frequire\0", "config", "telescope.nvim")
 time([[Config for telescope.nvim]], false)
 -- Config for: conform.nvim
 time([[Config for conform.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\fconform\frequire\0", "config", "conform.nvim")
 time([[Config for conform.nvim]], false)
+-- Config for: typescript-tools.nvim
+time([[Config for typescript-tools.nvim]], true)
+try_loadstring("\27LJ\2\nB\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\21typescript-tools\frequire\0", "config", "typescript-tools.nvim")
+time([[Config for typescript-tools.nvim]], false)
+-- Config for: ts-comments.nvim
+time([[Config for ts-comments.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16ts-comments\frequire\0", "config", "ts-comments.nvim")
+time([[Config for ts-comments.nvim]], false)
 -- Config for: tokyonight.nvim
 time([[Config for tokyonight.nvim]], true)
-try_loadstring("\27LJ\2\n†\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\vstyles\1\0\2\rsidebars\16transparent\vfloats\16transparent\1\0\1\16transparent\2\nsetup\15tokyonight\frequire\0", "config", "tokyonight.nvim")
+try_loadstring("\27LJ\2\n†\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\1K\0\1\0\vstyles\1\0\2\vfloats\16transparent\rsidebars\16transparent\1\0\1\16transparent\2\nsetup\15tokyonight\frequire\0", "config", "tokyonight.nvim")
 time([[Config for tokyonight.nvim]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 try_loadstring("\27LJ\2\nƒ\2\0\0\5\0\18\0\0216\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0035\4\b\0=\4\t\0035\4\n\0=\4\v\0035\4\f\0=\4\r\0035\4\14\0=\4\15\3=\3\17\2B\0\2\1K\0\1\0\nsigns\1\0\1\15signcolumn\2\14untracked\1\0\1\ttext\bâ”†\17changedelete\1\0\1\ttext\6~\14topdelete\1\0\1\ttext\bâ€¾\vdelete\1\0\1\ttext\bï‘˜\vchange\1\0\1\ttext\bâ”ƒ\badd\1\0\0\1\0\1\ttext\bâ”ƒ\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
 time([[Config for gitsigns.nvim]], false)
+-- Config for: cloak.nvim
+time([[Config for cloak.nvim]], true)
+try_loadstring("\27LJ\2\n´\1\0\0\5\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0004\3\3\0005\4\4\0>\4\1\3=\3\5\2B\0\2\1K\0\1\0\rpatterns\1\0\2\18cloak_pattern\b=.+\17file_pattern\14.*%.env.*\1\0\3\20highlight_group\fComment\20cloak_character\bâ€¢\fenabled\2\nsetup\ncloak\frequire\0", "config", "cloak.nvim")
+time([[Config for cloak.nvim]], false)
+-- Config for: supermaven-nvim
+time([[Config for supermaven-nvim]], true)
+try_loadstring("\27LJ\2\n\15\0\0\1\0\0\0\2+\0\1\0L\0\2\0º\2\1\0\4\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\0025\3\b\0=\3\t\0023\3\n\0=\3\v\2B\0\2\1K\0\1\0\14condition\0\ncolor\1\0\2\21suggestion_color\f#accccc\ncterm\3ô\1\21ignore_filetypes\1\0\1\bcpp\2\fkeymaps\1\0\3\20disable_keymaps\2\30disable_inline_completion\2\14log_level\tinfo\1\0\3\16accept_word\n<C-b>\22accept_suggestion\n<TAB>\21clear_suggestion\n<C-c>\nsetup\20supermaven-nvim\frequire\0", "config", "supermaven-nvim")
+time([[Config for supermaven-nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads

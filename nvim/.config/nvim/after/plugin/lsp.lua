@@ -34,7 +34,7 @@ lsp_zero.on_attach(function(client, bufnr)
 end)
 
 -- Mason Setup
-require("mason").setup({})
+require("mason").setup({ handlers = { lsp_zero.default_setup } })
 require("mason-lspconfig").setup({
 	ensure_installed = {
 		"rust_analyzer",
@@ -63,13 +63,17 @@ require("typescript-tools").setup({
 		vim.keymap.set("n", "<leader>ru", ":TSToolsRemoveUnused<CR>", opts)
 		vim.keymap.set("n", "<leader>rf", ":TSToolsRenameFile<CR>", opts)
 	end,
-	root_dir = require("lspconfig.util").root_pattern("tsconfig.json", ".git"),
+
+	-- root_dir = vim.lsp.config["util"].root_pattern("tsconfig.json", ".git"),
+	root_dir = function(fname)
+		return vim.fs.root(fname, { "tsconfig.json", "package.json", ".git" })
+	end,
 	single_file_support = true,
 	cmd = { vim.fn.exepath("vtsls"), "--stdio" },
 
 	-- Optimize performance
 	settings = {
-		tsserver_path = "/home/joe/.local/share/pnp/vtsls",
+		-- tsserver_path = "/home/joe/.local/share/pnp/vtsls",
 		publish_diagnostic_on = "insert_leave",
 		complete_function_calls = false,
 		separate_diagnostic_server = true,
@@ -78,27 +82,37 @@ require("typescript-tools").setup({
 			includeInlayVariableTypeHints = false,
 			includeInlayFunctionParameterTypeHints = false,
 		},
-		tsserver_max_memory = 6144,
+		tsserver_max_memory = 8144,
 		tsserver_enable_imports_autocomplete = true,
 		tsserver_experimental_enable_project_diagnostics = false,
 	},
 })
 
 -- Lua LS Setup (Fix annoying diagnostics)
-require("lspconfig").lua_ls.setup({
+vim.lsp.config("lua_ls", {
 	capabilities = capabilities,
 	settings = {
 		Lua = {
 			completion = { callSnippet = "Replace" },
 			diagnostics = { globals = { "vim" } },
+			hint = { enable = true }, -- enables inline type hints
+			telemetry = { enable = false }, -- disables telemetry
+			workspace = {
+				checkThirdParty = false, -- don’t prompt for 3rd-party libraries
+				library = vim.api.nvim_get_runtime_file("", true), -- make runtime files available
+			},
 		},
 	},
 })
-
 -- Rust Tools Setup
 require("rust-tools").setup({
 	server = {
 		capabilities = capabilities,
 		on_attach = lsp_zero.on_attach,
 	},
+})
+-- prisma
+require("lspconfig").prismals.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
 })
