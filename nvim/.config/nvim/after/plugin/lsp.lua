@@ -68,21 +68,25 @@ require("typescript-tools").setup({
 	root_dir = function(fname)
 		return vim.fs.root(fname, { "tsconfig.json", "package.json", ".git" })
 	end,
-	single_file_support = true,
-	cmd = { vim.fn.exepath("vtsls"), "--stdio" },
+	single_file_support = false,
+	cmd = {
+		"/home/joe/.nvm/versions/node/v20.11.1/bin/node",
+		vim.fn.exepath("vtsls"),
+		"--stdio",
+	},
 
 	-- Optimize performance
 	settings = {
 		-- tsserver_path = "/home/joe/.local/share/pnp/vtsls",
 		publish_diagnostic_on = "insert_leave",
 		complete_function_calls = false,
-		separate_diagnostic_server = true,
+		separate_diagnostic_server = false,
 		tsserver_file_preferences = {
 			includeInlayParameterNameHints = "none",
 			includeInlayVariableTypeHints = false,
 			includeInlayFunctionParameterTypeHints = false,
 		},
-		tsserver_max_memory = 8144,
+		tsserver_max_memory = 4096,
 		tsserver_enable_imports_autocomplete = true,
 		tsserver_experimental_enable_project_diagnostics = false,
 	},

@@ -77,8 +77,8 @@ alias c='clear'
 alias bat='batcat'
 alias gst='git status'
 alias vim='nvim'
-alias todo='nvim ~/Practice/Notes/TODO.txt'
-alias notes='cd ~/Practice/Notes/ && tmux new -s Notes'
+alias todo='nvim ~/Practice/Notes/TODO.md'
+alias notes='nvim ~/Practice/Notes/notes.md'
 alias cov='nvim ~/Practice/Notes/summAndLetter'
 alias upNotes='~/Practice/Notes/upNotes.sh'
 alias opc='opencode run --model google/gemini-2.0-flash '
@@ -131,4 +131,3 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
