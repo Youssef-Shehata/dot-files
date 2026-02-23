@@ -2,12 +2,7 @@
 vim.opt.timeoutlen = 300
 vim.opt.ttimeoutlen = 10
 
-
-
-
-
 --NEWSHIT
-
 
 vim.opt.number = true
 vim.opt.mouse = 'a'
