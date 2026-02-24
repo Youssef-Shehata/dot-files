@@ -1,5 +1,3 @@
-#profiler
-#zmodload zsh/zprof
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -72,7 +70,7 @@ bindkey '^[[1;5D' backward-word  # Ctrl + Left Arrow
 
 # Aliases
 alias tmuxp='tmux new-session -s "$(basename "$(dirname "$PWD")")/$(basename "$PWD")"'
-alias ls='ls --color=auto'
+alias ls='ls -l --color=auto'
 alias c='clear'
 alias bat='batcat'
 alias gst='git status'
@@ -122,7 +120,6 @@ export VISUAL=nvim
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-. "$HOME/.turso/env"
 source <(pnpm completion zsh)
 
 # pnpm

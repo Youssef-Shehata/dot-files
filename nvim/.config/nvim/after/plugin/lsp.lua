@@ -35,7 +35,6 @@ require("mason-lspconfig").setup({
         "clangd",
         "lua_ls",
         "pyright",
-        "ts_ls",
         "prismals",
     },
     handlers = {
@@ -54,41 +53,6 @@ require("mason-lspconfig").setup({
                         workspace = {
                             checkThirdParty = false,
                             library = vim.api.nvim_get_runtime_file("", true),
-                        },
-                    },
-                },
-            })
-        end,
-        ["ts_ls"] = function()
-            vim.lsp.start({
-                name = "ts_ls",
-                cmd = { vim.fn.exepath("ts_ls"), "--stdio" },
-                capabilities = capabilities,
-                on_attach = function(client, bufnr)
-                    on_attach(client, bufnr)
-                    client.server_capabilities.documentFormattingProvider = false
-                    client.server_capabilities.documentRangeFormattingProvider = false
-                    local opts = { buffer = bufnr, noremap = true, silent = true }
-                    vim.keymap.set("n", "<leader>oi", ":OrganizeImports<CR>", opts)
-                    vim.keymap.set("n", "<leader>ai", ":AddMissingImports<CR>", opts)
-                    vim.keymap.set("n", "<leader>ru", ":RemoveUnused<CR>", opts)
-                end,
-                root_dir = function(fname)
-                    return vim.fs.root(fname, { "tsconfig.json", "package.json", ".git" })
-                end,
-                settings = {
-                    typescript = {
-                        inlayHints = {
-                            includeInlayParameterNameHints = "none",
-                            includeInlayVariableTypeHints = false,
-                            includeInlayFunctionParameterTypeHints = false,
-                        },
-                    },
-                    javascript = {
-                        inlayHints = {
-                            includeInlayParameterNameHints = "none",
-                            includeInlayVariableTypeHints = false,
-                            includeInlayFunctionParameterTypeHints = false,
                         },
                     },
                 },
