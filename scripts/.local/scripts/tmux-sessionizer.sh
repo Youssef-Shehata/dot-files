@@ -328,7 +328,8 @@ if [[ "$selected" =~ ^\[TMUX\]\ (.+)$ ]]; then
     selected="${BASH_REMATCH[1]}"
 fi
 
-selected_name=$(basename "$selected" | tr . _)
+parent_dir=$(basename "$(dirname "$selected")")
+selected_name="${parent_dir}/$(basename "$selected" | tr . _)"
 
 if ! is_tmux_running; then
     tmux new-session -ds "$selected_name" -c "$selected"
